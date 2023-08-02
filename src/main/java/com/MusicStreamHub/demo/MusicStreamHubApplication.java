@@ -1,9 +1,9 @@
 package com.MusicStreamHub.demo;
 
+import com.MusicStreamHub.demo.service.ApiRequestService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
-import com.example.spotifyApp.service.ApiRequestService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

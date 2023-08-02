@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Home {
-
-    @GetMapping("/")
-        public String home(){
-        return "Hello Azure confirm? y/n";
-        }
+//
+//    @GetMapping("/")
+//        public String home(){
+//        return "Hello Azure confirm? y/n";
+//        }
 }
