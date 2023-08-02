@@ -9,6 +9,6 @@ public class Home {
 
     @GetMapping("/")
         public String home(){
-        return "Hello Azure confirm?";
+        return "Hello Azure confirm? y/n";
         }
 }
