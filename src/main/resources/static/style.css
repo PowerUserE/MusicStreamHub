@@ -1,0 +1,780 @@
+
+/* === Google Font Import - Poppins === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Global Styles */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Search and Results */
+.searchAndResults {
+    display: block;
+    padding: 10px;
+    height: 100%;
+    margin: auto;
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 1, 0)),url("https://wallpaper-house.com/data/out/8/wallpaper2you_230072.jpg") ;*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 1, 0)),url("https://wallpapercave.com/wp/wp4473716.jpg") ;
+    /*background: #B91D82;*/
+    color: #fff;
+}
+
+.searchAndResults > h1 {
+    /*padding-top: 200px;*/
+}
+
+.searchTitle {
+    text-align: center;
+    align-items: center;
+    font-weight: 600;
+    margin-top: 75px;
+    margin-bottom: 0px;
+    padding: 0px;
+    /*background-color: #15A986;*/
+    font-size: 34px;
+}
+
+.searchDiv {
+    margin: auto;
+    display: flex;
+    height: 80px;
+    width: 90%;
+    max-width: 600px;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Navigation */
+.navbarDiv {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar .btn-primary {
+    margin-left: 10px;
+}
+
+/* Masthead */
+.masthead {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.masthead h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.masthead input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.masthead button {
+    margin-top: 10px;
+}
+
+/* Results */
+#profileResults {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#profileResults h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#profileResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#profileResults .container {
+    max-width: 1200px;
+}
+
+#profileResults > div {
+    width: 20%;
+    padding: 10px;
+}
+
+#profileResults form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#profileResults form button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+#profileResults img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#profileResults h5 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .masthead h1 {
+        font-size: 24px;
+    }
+
+    .masthead input[type="text"] {
+        font-size: 16px;
+    }
+}
+
+/* === Artist Card === */
+*.artistCard {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.artistCard {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+
+section.artistCard {
+    position: relative;
+    height: 450px;
+    /*width: 1075px;*/
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+    width: 950px;
+}
+
+.card {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    margin: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background: #1DB954;
+    border-radius: 20px 20px 0 0;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+section .card .image {
+    height: 150px;
+    width: 140px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #1DB954;
+    border-radius: 50%;
+}
+
+.card .name-profession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: blue;
+}
+
+.name-profession .name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.name-profession .profession {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.card .rating i {
+    font-size: 18px;
+    margin: 0 2px;
+    color: #1DB954;
+}
+
+.card .button {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card .button button {
+    background: #1DB954;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background: #6616d0;
+}
+
+.swiper-pagination {
+    position: absolute;
+}
+
+.swiper-pagination-bullet {
+    height: 7px;
+    width: 26px;
+    border-radius: 25px;
+    background: #1DB954;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    opacity: 0.7;
+    color: #1DB954;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+    color: #1DB954;
+}
+
+/* Form */
+.form {
+    --input-bg: #c0c0c0;
+    /*  background of input */
+    --padding: 1.5em;
+    --rotate: 80deg;
+    /*  rotation degree of input*/
+    --gap: 2em;
+    /*  gap of items in input */
+    --icon-change-color: #15A986;
+    /*  when rotating changed icon color */
+    --height: 40px;
+    /*  height */
+    width: 45%;
+    padding-inline-end: 1em;
+    /*  change this for padding in the end of input */
+    background: var(--input-bg);
+    position: relative;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.form label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--height);
+}
+
+.form input {
+    width: 100%;
+    padding-inline-start: calc(var(--padding) + var(--gap));
+    outline: none;
+    background: none;
+    border: 0;
+}
+
+/* Style for both icons -- search, close */
+.form svg {
+    /* display: block; */
+    color: #111;
+    transition: 0.3s cubic-bezier(.4,0,.2,1);
+    position: absolute;
+    height: 15px;
+}
+
+/* Search icon */
+.icon {
+    position: absolute;
+    left: var(--padding);
+    transition: 0.3s cubic-bezier(.4,0,.2,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Arrow icon */
+.swap-off {
+    transform: rotate(-80deg);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Close button */
+.close-btn {
+    /* removing default bg of button */
+    background: none;
+    border: none;
+    right: calc(var(--padding) - var(--gap));
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    padding: 0.1em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+    opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
+}
+
+.form input:focus ~ .icon {
+    transform: rotate(var(--rotate)) scale(1.3);
+}
+
+.form input:focus ~ .icon .swap-off {
+    opacity: 1;
+    transform: rotate(-80deg);
+    visibility: visible;
+    color: var(--icon-change-color);
+}
+
+.form input:focus ~ .icon .swap-on {
+    opacity: 0;
+    visibility: visible;
+}
+
+.form input:valid ~ .icon {
+    transform: scale(1.3) rotate(var(--rotate));
+}
+
+.form input:valid ~ .icon .swap-off {
+    opacity: 1;
+    visibility: visible;
+    color: var(--icon-change-color);
+}
+
+.form input:valid ~ .icon .swap-on {
+    opacity: 0;
+    visibility: visible;
+}
+
+.form input:valid ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: 0s;
+}
+
+/* Artist Profile and Tracks */
+.artistProfileAndTracks {
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    /*min-height: 100vh;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    background: #000000;
+    margin: auto;
+    /*justify-content: center;*/
+    /*border-color: #6616d0;*/
+}
+
+.singleArtistProfile {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-left: 25px;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 1050px;
+    position: relative;
+    padding-left: 95px;
+    padding-top: 55px;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #fff;
+    /*border-radius: 50%;*/
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+    background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+    top: 150px;
+    left: 75px;
+    display: none;
+    /*padding-left: 125px;*/
+    /*!*margin-left: 125px;*!*/
+    /*border-color: #15A986;*/
+    /*border-style: solid;*/
+}
+
+.wrapper i:last-child {
+    top: 150px;
+    right: -22px;
+    /*border-color: #15A986;*/
+    /*border-style: solid;*/
+}
+
+.wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+    pointer-events: none;
+}
+
+.carousel img {
+    /*height: 340px;*/
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    /*width: calc(100% / 3);*/
+
+    height: 200px;
+    width: 200px;
+}
+
+.carousel img:first-child {
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+    .carousel img {
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .carousel img {
+        width: 100%;
+    }
+}
+.second-page-title {
+    /* Add your desired styling for the title here */
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffffff; /* Change the color to your preferred color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*doaidfhjpaosvdn fhadl fvkasjdh vflaskuovfdhlaskdufvhas l;edfovkujhas ;lrfiouaswkyeh tfrlaiswoukfdgvh*/
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.track-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Change the number of columns as needed */
+    justify-content: center;
+}
+
+.track-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 5px;*/
+    margin: 5px;
+    max-width: 300px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #828282;
+    border-radius: 10px;
+    height: 120px;
+}
+
+.track-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #1DB954;
+}
+
+.track-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+
+.track-card .track-image {
+    flex: 0 0 80px; /* Set a fixed width for the image container */
+    height: 80px; /* Set the height to match the image height */
+    margin-right: 10px;
+}
+
+
+
+.track-card:hover img {
+     /*transform: scale(1.05);*/
+}
+
+
+
+.track-info {
+    flex: 1;
+}
+
+.track-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.track-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+:root {
+    --spotify-green: #1DB954;
+    --light-gray: #ccc;
+}
+
+/* Spotify-esque font */
+@import url('https://fonts.googleapis.com/css2?family=Circular:wght@300;400;700&display=swap');
+
+/* CSS styles for the card */
+.Sartist-card {
+    width: 220px;
+    height: 110px;
+    background-color: var(--spotify-green);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    font-family: 'Circular', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.Sartist-card:hover {
+    transform: scale(1.05);
+}
+
+.Sartist-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid #fff;
+}
+
+.Sartist-info {
+    text-align: left;
+    color: #fff;
+}
+
+.Sartist-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.Sartist-detail {
+    font-size: 14px;
+}
+
+/*adlfihja spodfih aspofdih aspdf */
+body {
+    /* font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; */
+}
+
+.Songlyrics {
+    display: flex;
+    flex-direction: row;
+    margin: 20px; /* Add margin around the container to create space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.current-song-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: auto;
+    margin-right: 75px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.album-art img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.song-info h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.youtube-video {
+    background-color: #c0c0c0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 240px;
+    margin: auto;
+    margin-left: 75px;
+}
+
+.lyrics-section {
+    /*margin-top: 20px;*/
+    /*margin-left: 20px;*/
+    /*margin-right: 20px;*/
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 1100px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    height: 800px;
+    padding-bottom: 20px;
+}
+
+.lyrics-section h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.lyrics-content {
+    white-space: pre-line;
+    overflow-y: auto;
+    max-height: 700px;
+}
+
+.lyrics-content p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+}

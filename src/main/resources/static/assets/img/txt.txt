@@ -1,0 +1,32 @@
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── com
+    │   │       └── example
+    │   │           └── spotifyapp
+    │   │               ├── controller
+    │   │               │   └── ArtistController.java
+    │   │               ├── model
+    │   │               │   └── Artist.java
+    │   │               ├── repository
+    │   │               │   └── ArtistRepository.java
+    │   │               ├── service
+    │   │               │   └── ArtistService.java
+    │   │               └── SpotifyAppApplication.java
+    │   └── resources
+    │       ├── static
+    │       │   └── css
+    │       │       └── styles.css
+    │       └── templates
+    │           ├── index.html
+    │           └── result.html
+    └── test
+        └── java
+            └── com
+                └── example
+                    └── spotifyapp
+                        ├── controller
+                        │   └── ArtistControllerTest.java
+                        ├── service
+                        │   └── ArtistServiceTest.java
+                        └── SpotifyAppApplicationTests.java
