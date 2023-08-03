@@ -201,7 +201,7 @@
         <!-- Your track profile content goes here -->
         <!-- For example, you can use th:each to iterate over your tracks -->
         <div th:each="trackProfile : ${track}">
-              <form class="track-card" th:action="@{/searchArtistQuery}" method="get" target="lyricsFrame">
+              <form class="track-card" th:action="@{/searchArtistQuery}" method="get" >
                   <input type="hidden" name="fetchLyrics" value="true" />
                   <input type="hidden" name="trackName" th:value="${trackProfile['name']}" />
                   <input type="hidden" name="artistName" th:value="${trackProfile['Artists']}" />
