@@ -8,13 +8,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<!--   ===== Link Swiper's CSS =====-->
+  <!--   ===== Link Swiper's CSS =====-->
   <link
           rel="stylesheet"
           href="https://unpkg.com/swiper/swiper-bundle.min.css"
   />
 
-<!--   ===== Fontawesome CDN Link =====-->
+  <!--   ===== Fontawesome CDN Link =====-->
   <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -35,7 +35,7 @@
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
       <a href="#!">SpotifyGenius</a>
-      <a class="btn btn-primary" href="#signup">Sign In</a>
+      <a class="btn btn-primary" href="#signup">Coming Soon</a>
     </div>
   </nav>
 </div>
@@ -113,7 +113,7 @@
   <div class="artistCardDiv">
     <section class="artistCard">
       <div class="swiper mySwiper swiper-container-artistCard">
-      <div class="swiper-wrapper content">
+        <div class="swiper-wrapper content">
           <div class="swiper-slide card" th:each="profile : ${artist}">
             <div class="card-content">
               <div class="image">
@@ -128,11 +128,11 @@
                           name="queryTrackArtist"
                           th:value="${profile['name']}"
                   />
-                    <input
-                            type="hidden"
-                            name="queryArtistImage"
-                            th:value="${profile['imageUrls']}"
-                    />
+                  <input
+                          type="hidden"
+                          name="queryArtistImage"
+                          th:value="${profile['imageUrls']}"
+                  />
                   <a
                           href="#"
                           onclick="this.parentNode.submit(); return false;"
@@ -159,13 +159,13 @@
                           name="queryTrackArtist"
                           th:value="${profile['name']}"
                   />
-<!--                                                  <span class="name" th:text="${profile['name']}"></span>-->
-                                        <a
-                                          href="#"
-                                          onclick="this.parentNode.submit(); return false;"
-                                          class="name"
-                                          th:text="${profile['name']}"
-                                        ></a>
+                  <!--                                                  <span class="name" th:text="${profile['name']}"></span>-->
+                  <a
+                          href="#"
+                          onclick="this.parentNode.submit(); return false;"
+                          class="name"
+                          th:text="${profile['name']}"
+                  ></a>
                 </form>
                 <a th:href="${profile['externalUrl']}">
                   <span class="profession">Spotify Profile</span>
@@ -190,10 +190,15 @@
     <section id="trackProfileResults">
       <div><h3 class="second-page-title">Artists top Tracks!</h3>
         <div class="Sartist-card">
-          <img th:src="${chosenArtistImgUrl}" alt="SArtist Name" class="Sartist-image">
+          <img th:if="${chosenArtistImgUrl != null and !chosenArtistImgUrl.isEmpty()}"
+               th:src="${chosenArtistImgUrl}"
+               alt="SArtist Name" class="Sartist-image">
+          <img th:unless="${chosenArtistImgUrl != null and !chosenArtistImgUrl.isEmpty()}"
+               src="https://i.stack.imgur.com/34AD2.jpg"
+               alt="SArtist Name" class="Sartist-image">
           <div class="Sartist-info">
             <div th:text="${artistNameDebug}" class="artist-name"> - Artist Name</div>
-            <div class="artist-detail">Link</div>
+            <div class="artist-detail"> </div>
           </div>
         </div>
       </div>
@@ -201,37 +206,37 @@
         <!-- Your track profile content goes here -->
         <!-- For example, you can use th:each to iterate over your tracks -->
         <div th:each="trackProfile : ${track}">
-              <form class="track-card" th:action="@{/searchArtistQuery}" method="get" >
-                  <input type="hidden" name="fetchLyrics" value="true" />
-                  <input type="hidden" name="trackName" th:value="${trackProfile['name']}" />
-                  <input type="hidden" name="artistName" th:value="${trackProfile['Artists']}" />
-<!--                  />-->
+          <form class="track-card" th:action="@{/searchArtistQuery}" method="get"   >
+            <input type="hidden" name="fetchLyrics" value="true" />
+            <input type="hidden" name="trackName" th:value="${trackProfile['name']}" />
+            <input type="hidden" name="artistName" th:value="${trackProfile['Artists']}" />
+            <!--                  />-->
 
-                      <!--            <a th:href="${trackProfile['externalUrl']}">-->
-                      <a
-                              href="#"
-                              onclick="this.parentNode.submit(); return false;"
-                              type="submit"
-                              id="trackForm"
-                      >
-                          <img
-                                  th:src="${trackProfile.imageUrls != null && !trackProfile.imageUrls.isEmpty() ? trackProfile.imageUrls[0] : 'https://i.stack.imgur.com/34AD2.jpg'}"
-                                  alt="Track Image"
-                          />
-                      </a>
-                  <div class="track-info">
-                      <h3 th:text="${trackProfile['name']}"></h3>
-                      <p th:text="${trackProfile['Artists']}"></p>
-                  </div>
-              </form>
+            <!--            <a th:href="${trackProfile['externalUrl']}">-->
+            <a
+                    href="#"
+                    onclick="this.parentNode.submit(); return false;"
+                    type="submit"
+                    id="trackForm"
+            >
+              <img
+                      th:src="${trackProfile.imageUrls != null && !trackProfile.imageUrls.isEmpty() ? trackProfile.imageUrls[0] : 'https://i.stack.imgur.com/34AD2.jpg'}"
+                      alt="Track Image"
+              />
+            </a>
+            <div class="track-info">
+              <h3 th:text="${trackProfile['name']}"></h3>
+              <p th:text="${trackProfile['Artists']}"></p>
+            </div>
+          </form>
         </div>
-        </div>
+      </div>
     </section>
 
   </div>
 </div>
 
-<div class="lyricsAndYoutube">
+<div class="lyricsAndYoutube" id="lyricsAndYoutube">
   <div class="Songlyrics">
     <div class="current-song-card">
       <div class="album-art">
@@ -239,24 +244,24 @@
       </div>
       <div class="song-info">
         <h2 th:text="${chosenArtist}"> - </h2>
-          <h2 th:text="${chosenTrack}"> - </h2>
+        <h2 th:text="${chosenTrack}"> - </h2>
       </div>
 
     </div>
     <div class="youtube-video">
-        <iframe width="560"
-                height="315"
-                th:src="${videoUrl}"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-        </iframe>
+      <iframe width="560"
+              height="315"
+              th:src="${videoUrl}"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+      </iframe>
     </div>
 
   </div>
 
   <div class="lyrics-section">
-<!--    <h3 th:text="${trackProfile['name']}"> Lyrics</h3>-->
+    <!--    <h3 th:text="${trackProfile['name']}"> Lyrics</h3>-->
     <div class="lyrics-content">
       <span th:text="${lyrics}">[Lyrics will be displayed here]</span>
     </div>
@@ -282,36 +287,15 @@
   </footer>
 </div>
 
-<script>
-  var urlParams = new URLSearchParams(window.location.search);
-  var queryParam = urlParams.get("query");
-  var queryParamTrack = urlParams.get("queryTrackArtist");
 
-  if (queryParamTrack == null) {
-    // Scroll to the profile results section
-    window.location.href = "#profileResults";
-  } else if (queryParamTrack) {
-    // Scroll to the profile results section
-    window.location.href = "#trackProfileResults";
-  }
-</script>
+
 
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+<!-- ... Your HTML code ... -->
+
 <script>
-  // Get all swiper container elements
-  const swiperContainers = document.querySelectorAll(".swiper-container");
-
-  // Initialize each Swiper instance with its unique class name
-  swiperContainers.forEach((container, index) => {
-    container.classList.add(`swiper-container-${index}`);
-    new Swiper(`.swiper-container-${index}`, {
-      // ... Add the appropriate options for each carousel ...
-      // For example, use different slidesPerView, spaceBetween, etc.
-    });
-  });
-
   // Initialize the swiper for the artistCard section
   var artistSwiper = new Swiper(".swiper-container-artistCard", {
     slidesPerView: 4,
@@ -329,22 +313,30 @@
     },
   });
 
-  // // Smooth scrolling when clicking on the artist card image
-  // document.getElementById("artistCardImage").addEventListener("click", function (event) {
-  //   event.preventDefault();
-  //   const targetSection = document.getElementById("chosenArtistSection");
-  //   const targetOffset = targetSection.offsetTop;
-  //
-  //   // Optionally, you can add an offset to adjust the scroll position if needed
-  //   const offset = 50;
-  //
-  //   window.scroll({
-  //     top: targetOffset - offset,
-  //     behavior: "smooth",
-  //   });
-  // });
+  // Function to handle smooth scrolling to specific sections
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
+  // Check for URL parameters and scroll to the appropriate section
+  document.addEventListener("DOMContentLoaded", function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var queryParamTrackArtist = urlParams.get("queryTrackArtist");
+    var querytrackName = urlParams.get("trackName");
+
+    if (querytrackName) {
+      scrollToSection("lyricsAndYoutube");
+    } else if (queryParamTrackArtist) {
+      scrollToSection("trackProfileResults");
+    } else if (urlParams.has("query")) {
+      scrollToSection("searchResults");
+    }
+  });
 </script>
+
 
 
 
