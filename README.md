@@ -1,6 +1,6 @@
 # MusicStreamHub
 
-Welcome to the GitHub repository for our Music MusicStreamHub Web Application! This project is a web application that aims to provide users with an immersive and comprehensive music experience. By combining various third-party APIs and micro services, we have created a platform that allows users to explore, discover, and analyze music in a unique and interactive way.
+Welcome to the GitHub repository for our Music MusicStreamHub Web Application! This project is a web application that aims to provide users with an all in one Music Streaming experience. By combining various third-party APIs and micro services, we have created a platform that allows users to explore, discover, and analyze music and Artists in a unique and interactive way.
 
 ## Key Features
 
@@ -32,7 +32,7 @@ We have deployed our web application on the Microsoft Azure cloud platform using
 
 ## Future Enhancements
 
-We are committed to continuous improvement and innovation. In the future, we plan to implement AI models for Music Mood Analysis. This exciting feature will allow users to explore music based on emotions, providing a unique and personalized way to engage with their favorite tunes.
+We are committed to continuous improvement and innovation. In the future, we plan to implement AI models for Music Mood Analysis. This feature will allow users to explore music based on emotions, providing a unique and personalized way to engage with their favorite tunes.
 
 ## Get Involved
 
