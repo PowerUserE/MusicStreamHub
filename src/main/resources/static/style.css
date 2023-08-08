@@ -586,8 +586,10 @@ section .card .image {
     position: relative; /* Add relative positioning to the container */
     padding: 20px;
     border-radius: 10px;
-    width: 560px;
-    height: 315px;
+/*     width: 560px;
+    height: 315px; */
+    width: 50px;
+    height: 35px;
     margin: auto;
     margin-left: 75px;
     overflow: hidden; /* Hide any overflow to prevent video spillover */
