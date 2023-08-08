@@ -413,19 +413,6 @@ section .card .image {
     margin-bottom: 20px;
 }
 
-/*doaidfhjpaosvdn fhadl fvkasjdh vflaskuovfdhlaskdufvhas l;edfovkujhas ;lrfiouaswkyeh tfrlaiswoukfdgvh*/
-
-/*html,*/
-/*body {*/
-/*    position: relative;*/
-/*    height: 100%;*/
-/*    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
-/*    font-size: 14px;*/
-/*    color: #000;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
-
 .track-cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -586,10 +573,8 @@ section .card .image {
     position: relative; /* Add relative positioning to the container */
     padding: 20px;
     border-radius: 10px;
-/*     width: 560px;
-    height: 315px; */
-    width: 50px;
-    height: 35px;
+    width: 560px;
+    height: 315px;
     margin: auto;
     margin-left: 75px;
     overflow: hidden; /* Hide any overflow to prevent video spillover */
@@ -603,9 +588,6 @@ section .card .image {
 }
 
 .lyrics-section {
-    /*margin-top: 20px;*/
-    /*margin-left: 20px;*/
-    /*margin-right: 20px;*/
     margin: auto;
     margin-bottom: 20px;
     max-width: 1100px;
