@@ -1,10 +1,10 @@
 # MusicStreamHub
 
-Welcome to the GitHub repository for our Music Discovery and Analysis Web Application! This project is a web application that aims to provide users with an immersive and comprehensive music experience. By combining various third-party APIs and cutting-edge technologies, we have created a platform that allows users to explore, discover, and analyze music in a unique and interactive way.
+Welcome to the GitHub repository for our Music MusicStreamHub Web Application! This project is a web application that aims to provide users with an immersive and comprehensive music experience. By combining various third-party APIs and micro services, we have created a platform that allows users to explore, discover, and analyze music in a unique and interactive way.
 
 ## Key Features
 
-- **Frontend Technologies**: Our frontend is built using a combination of HTML, CSS, JavaScript, Thymeleaf, and Bootstrap. This ensures a visually appealing and responsive design that adapts to various devices and screen sizes.
+- **Frontend Technologies**: Our frontend is built using a combination of HTML, CSS, JavaScript, Thymeleaf, and Bootstrap. This ensures a visually appealing Design.
 
 - **Third-Party APIs Integration**: We leverage several third-party APIs, including Spotify API, Genius API, MusixMatch API, and YouTube API. These APIs enable us to fetch a wealth of music-related data, including artist information, song details, lyrics, and embedded YouTube videos.
 
@@ -40,8 +40,10 @@ We welcome contributions, feedback, and suggestions from the community. If you'r
 
 Thank you for visiting our repository and for your interest in our project!
 
-**Authors**: [Your Name(s)]
+**Authors**: Eniola O.
 
-**Website**: [Project Website (if available)]
+**Website**: https://musicstreamhub.azurewebsites.net/
 
-**Contact**: [Your Contact Information]
+**Email**: Olumeyae@tcd.ie
+
+**LinkedIn**: https://www.linkedin.com/in/eniolabo/
