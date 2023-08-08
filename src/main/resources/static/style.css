@@ -81,84 +81,6 @@
     margin-left: 10px;
 }
 
-/* Masthead */
-.masthead {
-    background-color: #f8f9fa;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.masthead h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.masthead input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.masthead button {
-    margin-top: 10px;
-}
-
-/* Results */
-#profileResults {
-    padding: 50px 0;
-    text-align: center;
-}
-
-#profileResults h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-#profileResults {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#profileResults .container {
-    max-width: 1200px;
-}
-
-#profileResults > div {
-    width: 20%;
-    padding: 10px;
-}
-
-#profileResults form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-#profileResults form button {
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-#profileResults img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-#profileResults h5 {
-    font-size: 18px;
-    margin: 0;
-}
-
 /* Footer */
 footer {
     background-color: #f8f9fa;
@@ -168,32 +90,6 @@ footer {
     color: #777;
 }
 
-/* Responsive Styles */
-@media (max-width: 767px) {
-    .masthead h1 {
-        font-size: 24px;
-    }
-
-    .masthead input[type="text"] {
-        font-size: 16px;
-    }
-}
-
-/* === Artist Card === */
-*.artistCard {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body.artistCard {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f2f2f2;
-}
 
 section.artistCard {
     position: relative;
@@ -255,45 +151,6 @@ section .card .image {
     font-weight: 600;
 }
 
-.name-profession .profession {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.card .rating {
-    display: flex;
-    align-items: center;
-    margin-top: 18px;
-}
-
-.card .rating i {
-    font-size: 18px;
-    margin: 0 2px;
-    color: #1DB954;
-}
-
-.card .button {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.card .button button {
-    background: #1DB954;
-    outline: none;
-    border: none;
-    color: #fff;
-    padding: 8px 22px;
-    border-radius: 20px;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.button button:hover {
-    background: #6616d0;
-}
 
 .swiper-pagination {
     position: absolute;
@@ -322,19 +179,13 @@ section .card .image {
 /* Form */
 .form {
     --input-bg: #c0c0c0;
-    /*  background of input */
     --padding: 1.5em;
     --rotate: 80deg;
-    /*  rotation degree of input*/
     --gap: 2em;
-    /*  gap of items in input */
     --icon-change-color: #15A986;
-    /*  when rotating changed icon color */
     --height: 40px;
-    /*  height */
     width: 45%;
     padding-inline-end: 1em;
-    /*  change this for padding in the end of input */
     background: var(--input-bg);
     position: relative;
     border-radius: 4px;
@@ -564,16 +415,16 @@ section .card .image {
 
 /*doaidfhjpaosvdn fhadl fvkasjdh vflaskuovfdhlaskdufvhas l;edfovkujhas ;lrfiouaswkyeh tfrlaiswoukfdgvh*/
 
-html,
-body {
-    position: relative;
-    height: 100%;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-}
+/*html,*/
+/*body {*/
+/*    position: relative;*/
+/*    height: 100%;*/
+/*    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+/*    font-size: 14px;*/
+/*    color: #000;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
 
 .track-cards-container {
     display: flex;
@@ -695,12 +546,6 @@ body {
     font-size: 14px;
 }
 
-/*adlfihja spodfih aspofdih aspdf */
-body {
-    /* font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0; */
-}
 
 .Songlyrics {
     display: flex;
@@ -738,12 +583,21 @@ body {
 
 .youtube-video {
     background-color: #c0c0c0;
+    position: relative; /* Add relative positioning to the container */
     padding: 20px;
     border-radius: 10px;
-    width: 400px;
-    height: 240px;
+    width: 560px;
+    height: 315px;
     margin: auto;
     margin-left: 75px;
+    overflow: hidden; /* Hide any overflow to prevent video spillover */
+}
+.youtube-video iframe{
+    position: absolute; /* Add absolute positioning to the video */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the video width 100% of the container */
+    height: 100%; /* Make the video height 100% of the container */
 }
 
 .lyrics-section {
