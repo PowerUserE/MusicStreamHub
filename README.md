@@ -1,6 +1,6 @@
 # MusicStreamHub 
 ## (Video Demo) - https://drive.google.com/file/d/1FjPVI42attYO5CUTzq0YdLkJ4prX57CK/view 
-## (WebApp Demo - Please wait for a couple Seconds for app to load for the first time) - [https://drive.google.com/file/d/1FjPVI42attYO5CUTzq0YdLkJ4prX57CK/view ](https://musicstreamhub.azurewebsites.net/)
+## (WebApp Demo - Please wait for a couple Seconds for app to load for the first time) - (https://musicstreamhub.azurewebsites.net/)
 Welcome to the GitHub repository for our Music MusicStreamHub Web Application! This project is a web application that aims to provide users with an all in one Music Streaming experience. By combining various third-party APIs and micro services, we have created a platform that allows users to explore, discover, and analyze music and Artists in a unique and interactive way.
 
 ## Key Features
